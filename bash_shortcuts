@@ -15,3 +15,7 @@ shopt -s autocd
 
 bind '"\e[6~": menu-complete'
 bind '"\e[5~": menu-complete-backward'
+
+# BASH Exports
+export EDITOR=nvim
+export VISUAL=$EDITOR
