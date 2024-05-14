@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Bash Customizations
-. /usr/share/autojump/autojump.sh
-
 shopt -s cdspell;
 shopt -s nocaseglob;
 bind 'set show-all-if-ambiguous on'
