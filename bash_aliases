@@ -9,7 +9,12 @@ alias l='ls -CF --hyperlink=auto'
 
 # Copy to Clipboard.
 alias cp2clip='xclip -sel clip'
-# alias cp2clip='xclip -r -sel clip 1> /dev/null 2> /dev/null'
 
 # Lazygit
 alias lzg='lazygit'
+
+# ocat = cat
+alias ocat='/usr/bin/cat'
+
+# Cat = Bat
+alias cat='bat'

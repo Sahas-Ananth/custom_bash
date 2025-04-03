@@ -9,6 +9,12 @@ source "$custom_dir/bash_prompt"
 source "$custom_dir/bash_shortcuts"
 source "$custom_dir/bash_aliases"
 
+mkcd ()
+{
+    mkdir -p -- "$1" &&
+       cd -P -- "$1"
+}
+
 # Bash Customizations
 . /usr/share/autojump/autojump.sh
 
@@ -34,3 +40,18 @@ _fzf_compgen_dir() {
 }
 
 # TODO: Maybe look into https://github.com/junegunn/fzf-git.sh
+
+# Bat Customizations
+alias bathelp='bat --plain --language=help'
+if command -v bat 2>&1 >/dev/null
+then
+  batdiff() {
+      git diff --name-only --relative --diff-filter=d | xargs bat --diff
+  }
+  export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+  help() {
+      "$@" --help 2>&1 | bathelp
+  }
+else
+  echo "bat not found. Please install it: https://github.com/sharkdp/bat"
+fi
