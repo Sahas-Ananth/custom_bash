@@ -16,7 +16,11 @@ mkcd ()
 }
 
 # Bash Customizations
-. /usr/share/autojump/autojump.sh
+# Autojump
+# . /usr/share/autojump/autojump.sh
+
+# Zoxide
+eval "$(zoxide init bash --cmd j)"
 
 # FZF keybindings
 source /usr/share/doc/fzf/examples/key-bindings.bash
