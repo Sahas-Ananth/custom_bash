@@ -8,7 +8,7 @@ alias la='ls -A --hyperlink=auto'
 alias l='ls -CF --hyperlink=auto'
 
 # Copy to Clipboard.
-alias cp2clip='xclip -sel clip'
+alias cp2clip='xclip -r -sel clip'
 
 # Lazygit
 alias lzg='lazygit'
@@ -18,3 +18,6 @@ alias ocat='/usr/bin/cat'
 
 # Cat = Bat
 alias cat='bat'
+
+# Nvim = n
+alias n='nvim'

@@ -19,8 +19,11 @@ mkcd ()
 # Autojump
 # . /usr/share/autojump/autojump.sh
 
+shopt -s histappend
+PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
+
 # Zoxide
-eval "$(zoxide init bash --cmd j)"
+eval "$(zoxide init bash --cmd cd)"
 
 # FZF keybindings
 source /usr/share/doc/fzf/examples/key-bindings.bash
