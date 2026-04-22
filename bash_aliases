@@ -3,7 +3,7 @@
 # My custom bash aliases.
 
 # Reconfiguring ls to support hyperlinks used in kitty terminal.
-alias ll='ls -alF --hyperlink=auto'
+alias ll='ls -AlhvF --si --group-directories-first --hyperlink=auto'
 alias la='ls -A --hyperlink=auto'
 alias l='ls -CF --hyperlink=auto'
 
