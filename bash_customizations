@@ -12,7 +12,7 @@ source "$custom_dir/bash_aliases"
 mkcd ()
 {
     mkdir -p -- "$1" &&
-       cd -P -- "$1"
+       cd -- "$1"
 }
 
 # Bash Customizations
