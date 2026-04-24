@@ -20,7 +20,11 @@ mkcd ()
 # . /usr/share/autojump/autojump.sh
 
 shopt -s histappend
-PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
+if [ -z $PROMPT_COMMAND ]; then
+  PROMPT_COMMAND="history -a"
+else
+  PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
+fi
 
 # Zoxide
 eval "$(zoxide init bash --cmd cd)"
