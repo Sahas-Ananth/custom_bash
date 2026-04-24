@@ -26,8 +26,7 @@ PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 eval "$(zoxide init bash --cmd cd)"
 
 # FZF keybindings
-source /usr/share/doc/fzf/examples/key-bindings.bash
-source /usr/share/bash-completion/completions/fzf
+eval "$(fzf --bash)"
 # -- Use fd instead of fzf --
 
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
